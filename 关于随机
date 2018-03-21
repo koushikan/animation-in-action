@@ -1,0 +1,15 @@
+
+
+比min大（可能与min相等）, 以及比max小(但是不等于max)
+Math.random() * (max - min) + min
+
+比min大（如果min不是整数，那么下一个整数大于min）, 以及比max小(但是不等于max)
+min = Math.ceil(min)
+max = Math.floor(max)
+Math.floor(Math.random() * (max - min)) + min
+
+
+得到一个两数之间的随机整数，包括两个数在内
+min = Math.ceil(min)
+max = Math.floor(max)
+Math.floor(Math.random() * (max - min + 1)) + min
