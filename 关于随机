@@ -13,3 +13,21 @@ Math.floor(Math.random() * (max - min)) + min
 min = Math.ceil(min)
 max = Math.floor(max)
 Math.floor(Math.random() * (max - min + 1)) + min
+
+
+随机顶点
+
+pos = Math.random() * (1 - (-1)) + (-1)    //  -1 ~ 1   
+
+rad =  Math.random() * (0.3 - 0.1) + 0.1   //0.1 ~ 0.3
+
+theta = Math.random() * Math.PI * 2        // 0 ~ 2PI   
+veltheta = Math.random() * Math.PI * 2 / 30  // 1/30 theta
+
+[rad * Math.cos(theta), rad * Math.sin(theta), 1.83]
+
+
+//三基  z不变的操作方法  di -> +=2  index -> i*3   fin: num * 2
+for (i = 0; i < num * 2; i += 2) {
+        bp = i * 3
+}
