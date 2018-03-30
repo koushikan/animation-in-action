@@ -1,0 +1,25 @@
+gl_FragCoord存储了活动线程正在处理的像素或屏幕碎片的坐标
+vec2 st = gl_FragCoord.xy/u_resolution;
+
+我们用 gl_FragCoord.xy 除以 u_resolution，对坐标进行了规范化。
+这样做是为了使所有的值落在 0.0 到 1.0 之间，这样就可以轻松把 X 或 Y 的值映射到红色或者绿色通道。
+
+
+plot line
+
+float plot(vec2 st, float pct){
+  return  smoothstep( pct-0.02, pct, st.y) -
+          smoothstep( pct, pct+0.02, st.y);
+}
+
+ float pct = plot(st,y);
+ color = (1.0-pct)*color+pct*vec3(0.0,1.0,0.0);
+ 
+ 
+ 
+ #define PI 3.14159265359
+ 
+ 
+ // Step will return 0.0 unless the value is over 0.5,
+    // in that case it will return 1.0
+    float y = step(0.5,st.x);
