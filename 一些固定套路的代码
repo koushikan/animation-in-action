@@ -23,3 +23,23 @@ float plot(vec2 st, float pct){
  // Step will return 0.0 unless the value is over 0.5,
     // in that case it will return 1.0
     float y = step(0.5,st.x);
+
+
+创作一个渐变来代表 William Turner的落日。
+
+用 u_time 做个一日出和日落的动画。
+
+能用我们所学的做一道彩虹吗？
+
+用 step（） 函数在做一个五彩的旗子。
+
+
+
+    // Each result will return 1.0 (white) or 0.0 (black).
+    float left = step(0.1,st.x);   // Similar to ( X greater than 0.1 )
+    float bottom = step(0.1,st.y); // Similar to ( Y greater than 0.1 )
+
+    // The multiplication of left*bottom will be similar to the logical AND.
+    color = vec3( left * bottom );
+    
+    
