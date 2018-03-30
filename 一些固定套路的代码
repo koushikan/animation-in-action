@@ -43,3 +43,7 @@ float plot(vec2 st, float pct){
     color = vec3( left * bottom );
     
     
+    vec2 borders = step(vec2(0.1),st);
+    float pct = borders.x * borders.y;
+    
+    
