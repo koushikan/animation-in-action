@@ -1,0 +1,7 @@
+vec3 mix_reference_line(vec3 base_color,float distance_to_line)
+{
+    return mix(
+        vec3(0.0, 1.0, 0.0),
+        base_color,
+        smoothstep(0.0, 0.01, distance_to_line));
+}
