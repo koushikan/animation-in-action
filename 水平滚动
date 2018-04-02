@@ -1,0 +1,3 @@
+    vec2 scrolling_offset = vec2((0.2 * u_time), 0.0);
+    
+    st += scrolling_offset;
