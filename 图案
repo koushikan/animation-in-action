@@ -1,0 +1,14 @@
+
+float naive_smooth_add(float alpha,float bravo)
+{
+    return (alpha + bravo - (alpha * bravo));
+}
+
+
+
+
+转化为中心为坐标原点
+     float min = -1.5 ;
+     float max = 1.5;
+     st.x = (((max - min) * st.x) + min);   //  -1.5 1.5 
+     st.y = (((max - min) * st.y) + min);
