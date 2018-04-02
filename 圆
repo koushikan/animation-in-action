@@ -1,0 +1,11 @@
+float circle_sdf( // Where "sdf" stands for "Signed Distance Function", a generalized approach to representing shapes.
+    vec2 test_point,
+	vec2 circle_center,
+	float circle_radius)
+{
+    float distance_to_center = distance(test_point, circle_center);
+    
+    float signed_distance = (distance_to_center - circle_radius);
+    
+    return signed_distance; // This value will be negative within the shape, zero along the edge, and positive outside.
+}
